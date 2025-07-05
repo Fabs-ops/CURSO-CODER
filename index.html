@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabian Esparza | Portafolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Portafolio</a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="pages/proyectos.html">Proyectos</a></li>
+                <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
+                <li><a href="pages/servicios.html">Servicios</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">Mi nombre es</p>
+                <h1>Fabian Esparza</h1>
+                <p class="subtitulo">Diseñador UI/UX | Diseñador gráfico</p>
+                <div class="hero-cta">
+                    <a href="pages/contacto.html" class="btn primario-btn">Contactarme</a>
+                    <a href="pages/sobre-mi.html" class="btn secundario-btn">Conocer más</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/mi-imagen-hero.jpg" alt="Fabian Esparza - Hero Image">
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="sobre-mi-seccion">
+            <div class="sobre-mi-image-wrapper">
+                <img src="images/sobre-mi-imagen.jpeg" alt="Imagen sobre mí">
+            </div>
+            <div class="sobre-mi-info">
+                <h2>Sobre mí</h2>
+                <div class="sobre-mi-cards">
+                    <div class="card">
+                        <h3>Diseñador Gráfico</h3>
+                        <p>con una base sólida en comunicación y experiencia en diseño gráfico. Esto me permite abordar proyectos con una perspectiva integral, combinando la comprensión profunda del usuario con un fuerte sentido estético. </p>
+                    </div>
+                    <div class="card">
+                        <h3>Diseñador Web</h3>
+                        <p>Mi objetivo es crear experiencias digitales intuitivas y atractivas que resuelvan problemas y mejoren la vida de las personas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="proyectos-seccion">
+            <h2>Proyectos</h2>
+            <div class="proyectos-grid">
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-solarever.png" alt="logo-solarever">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-solarinter.png" alt="logo-solarinter">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-solarever-ev.png" alt="logo-solarever-ev">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-solarever-usa.png" alt="logo-solarever-usa">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-dentco.png" alt="logo-dentco">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-yerba-mate.png" alt="logo-yerba-mate">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-fabs.png" alt="proyecto-cine-ux/ui">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-fabs.png" alt="proyecto-ecommerce-ux/ui">
+                </a>
+                <a href="pages/proyectos.html" class="proyecto-item">
+                    <img src="images/logo-fabs.png" alt="proyecto-mapa-ux">
+                </a>
+            </div>
+            <div class="proyectos-carousel-mobile">
+                <div class="carousel-item">
+                    <a href="pages/proyectos.html"><img src="https://via.placeholder.com/300x200?text=Proyecto+1" alt="Proyecto 1"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="pages/proyectos.html"><img src="https://via.placeholder.com/300x200?text=Proyecto+2" alt="Proyecto 2"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="pages/proyectos.html"><img src="https://via.placeholder.com/300x200?text=Proyecto+3" alt="Proyecto 3"></a>
+                </div>
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contacto">
+            <h3>Contacto</h3>
+            <p>Email: axelesparz@gmail.com</p>
+            <p>Teléfono: 55 4858 0584</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.behance.net/axelesparza1" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://www.instagram.com/fabian.esparz?Sigsh=MXdiaGQ0aHBiNjZtZw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/in/fabian-esparza-92983120b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div class="footer-derechos">
+            <p>&copy; 2024 Fabian Esparza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

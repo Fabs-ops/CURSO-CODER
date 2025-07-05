@@ -1,0 +1,782 @@
+/* Colores */
+:root {
+    --bg-gray: #EAE9E5;
+    --btn-blue: #465FEC;
+    --text-dark: #21284F;
+    --light-text: #fff;
+    --dark-header-footer: #333; 
+}
+
+/* Estilos Generales y del Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-gray); /* Color de fondo */
+    color: var(--text-dark); /* Color de texto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del Header */
+.header {
+    background-color: var(--dark-header-footer);
+    color: var(--light-text);
+    padding: 15px 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; /* Espacio entre el logo y enlaces */
+    align-items: center; 
+    max-width: 1200px; /* Ancho máximo para el contenido del navbar */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 30px; /* Espacio entre elementos del menú */
+}
+
+.navbar .nav-links li a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Hover */
+}
+
+.navbar .nav-links li a:hover {
+    color: var(--btn-blue); /* Color al hacer hover */
+}
+
+/* Hamburguer Menu para Mobile */
+.hamburger-menu {
+    display: none; /* Ocultar en desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-text);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 15px; /* Espacio entre botones */
+}
+
+.primario-btn {
+    background-color: var(--btn-blue);
+    color: var(--light-text);
+    border: 1px solid var(--btn-blue);
+}
+
+.primario-btn:hover {
+    background-color: #3a4ad9; /* Tono hover */
+}
+
+.secundario-btn {
+    background-color: transparent;
+    color: var(--btn-blue);
+    border: 1px solid var(--btn-blue);
+}
+
+.secundario-btn:hover {
+    background-color: var(--btn-blue);
+    color: var(--light-text);
+}
+
+/* Estilos de las Secciones Principales */
+main section {
+    padding: 80px 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el contenido e imagen */
+    gap: 40px; /* Espacio entre columnas */
+    min-height: 60vh; /* Altura mínima de la sección */
+}
+
+.hero-content {
+    flex: 1; /* Ocupa el espacio disponible */
+    max-width: 50%; /* Limitar ancho en desktop */
+}
+
+.hero-content .greeting {
+    font-size: 1.2em;
+    color: var(--text-dark); 
+    margin-bottom: 5px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em; /* Tamaño para el nombre */
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero-content .subtitulo {
+    font-size: 1.5em;
+    color: var(--btn-blue); /* Color subtítulo */
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1; 
+    max-width: 50%; /* Limitar ancho desktop */
+    text-align: right; /* Alinear imagen a la derecha */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sobre Mí Sección */
+.sobre-mi-seccion {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--bg-gray);
+    padding: 80px 20px;
+}
+
+.sobre-mi-image-wrapper {
+    flex: 1;
+    max-width: 40%; /* Ancho de la imagen */
+}
+
+.sobre-mi-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.sobre-mi-info {
+    flex: 2;
+    max-width: 60%;
+}
+
+.sobre-mi-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sobre-mi-info p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.sobre-mi-cards {
+    display: flex;
+    gap: 20px; /* Espacio entre cards */
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--light-text); /* Fondo para cards */
+    border-radius: 8px;
+    padding: 25px; /* Padding interno */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px; 
+    box-sizing: border-box;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--btn-blue);
+}
+
+/* Proyectos Sección */
+.proyectos-seccion {
+    text-align: center;
+    background-color: var(--bg-gray);
+    padding: 80px 20px;
+}
+
+.proyectos-seccion h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* columnas responsivas */
+    gap: 30px; 
+    padding-bottom: 50px; /* Espacio entre grid y footer */
+}
+
+.proyecto-item {
+    background-color: var(--light-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex; /* centrar imagen dentro del item */
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-item:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto-item img {
+    max-width: 80%; /* Mantener el logo en el contenedor */
+    max-height: 80%;
+    height: auto;
+    display: block; /* Elimina espacio debajo de la imagen */
+}
+
+/* Ocultar carrusel móvil en desktop */
+.proyectos-carousel-mobile {
+    display: none;
+}
+
+/* Estilos del Pie de Página (Footer) */
+.footer {
+    background-color: var(--dark-header-footer);
+    color: var(--light-text);
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around; /* Espacio iguaal entre las columnas del footer */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px; /* Espacio entre columnas */
+}
+
+.footer-contacto,
+.footer-social,
+.footer-derechos {
+    flex: 1; 
+    min-width: 250px; /* Ancho mínimo para cada columna */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.footer-contacto h3,
+.footer-social h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+.footer-contacto p {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+.footer-social a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--btn-blue);
+}
+
+.footer-derechos p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* ====================================================================== */
+/* Media Queries */
+/* ====================================================================== */
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Oculta el menú de enlaces */
+        flex-direction: column; 
+        width: 100%;
+        background-color: var(--dark-header-footer);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .navbar .nav-links.active {
+        display: flex; 
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0; 
+    }
+
+    .hamburger-menu {
+        display: flex; /* icono de hamburguesa */
+    }
+
+    /* Hero Section - Mobile */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+        order: 2;
+    }
+    .hero-image {
+        order: 1; /* Imagen primero */
+        margin-bottom: 30px; /* Espacio debajo de la imagen */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Ajusta tamaño de fuente para mobile */
+    }
+    .hero-content .subtitulo {
+        font-size: 1.2em;
+    }
+    .hero-cta {
+        display: flex; /* Mantener botones en fila si hay espacio */
+        justify-content: center;
+        flex-wrap: wrap; /* Permitir que los botones se envuelvan */
+        gap: 15px; /* Espacio entre botones */
+    }
+    .btn {
+        margin-right: 0;
+    }
+
+
+    /* Sobre Mí Section - Mobile */
+    .sobre-mi-seccion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mi-image-wrapper,
+    .sobre-mi-info {
+        max-width: 100%; 
+    }
+    .sobre-mi-image-wrapper {
+        margin-bottom: 30px; /* Espacio entre imagen y texto */
+    }
+
+    .sobre-mi-cards {
+        flex-direction: column; /* Apilar cards verticalmente */
+        gap: 15px;
+    }
+    .card {
+        min-width: unset;
+        width: 100%;
+    }
+
+
+    /* Proyectos Seccion - Mobile (Carrusel) */
+    .proyectos-grid {
+        display: none;
+    }
+
+    .proyectos-carousel-mobile {
+        display: block;
+        overflow-x: auto; 
+        white-space: nowrap; /* Mantiene ítems en una sola línea */
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory; /* Para detener cada ítem */
+        padding-bottom: 20px;
+    }
+
+    .carousel-item {
+        display: inline-block; /* Ítems en línea */
+        width: 80%; /* Ancho de cada ítem del carrusel */
+        margin-right: 20px; /* Espacio entre ítems */
+        scroll-snap-align: start;
+        box-sizing: border-box;
+        background-color: var(--light-text);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 15px;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    /* Footer - Mobile */
+    .footer {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        gap: 20px; 
+    }
+    .footer-contacto,
+    .footer-social,
+    .footer-derechos {
+        min-width: unset; 
+        width: 100%; 
+    }
+    .footer-social a {
+        margin: 0 8px; /
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        padding: 0 30px;
+    }
+    .navbar .nav-links li {
+        margin-left: 25px;
+    }
+    main section {
+        padding: 60px 30px;
+    }
+    .hero-section, .sobre-mi-seccion {
+        gap: 30px;
+    }
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-content .subtitulo {
+        font-size: 1.3em;
+    }
+    .sobre-mi-info h2, .proyectos-seccion h2 {
+        font-size: 2em;
+    }
+    .proyectos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* ====================================================================== */
+/*PÁGINA PROYECTOS*/
+/* ====================================================================== */
+/* Estilos de las Secciones Principales */
+
+/* Hero Section de Proyectos */
+.hero-seccion-proyectos {
+    position: relative; /* Para posicionar el contenido encima de la imagen de fondo */
+    height: 60vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    color: var(--light-text); /* Color de texto blanco para contrastar con la imagen */
+    background-image: url('../images/fondo-proyectos.jpg'); /* Imagen de fondo */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0; 
+    
+}
+
+.hero-seccion-proyectos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* opacidad de capa */
+    z-index: 1;
+}
+
+.hero-proyectos-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-proyectos-contenido h1 {
+    font-size: 3.5em;
+    color: var(--light-text); 
+    margin-bottom: 20px;
+}
+
+/* Sección de Carruseles de Proyectos */
+.proyectos-carrusel-seccion {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.proyectos-carrusel-seccion h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px; /* Espacio debajo del título del carrusel */
+}
+
+.carrusel-wrapper {
+    display: flex; 
+    overflow-x: auto; /* Permite desplazamiento horizontal si hay varios items */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    gap: 20px; /* Espacio entre ítems del carrusel */
+    scroll-padding-left: 20px; /* Padding al inicio del scroll */
+    scroll-padding-right: 20px; /* Padding al final del scroll */
+}
+
+.carrusel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Ancho fijo para cada ítem del carrusel */
+    background-color: var(--bg-gray); /* Fondo card */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 20px; /* interno */
+    text-align: center;
+    scroll-snap-align: start;
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-item img {
+    max-width: 100%;
+    height: auto; 
+    display: block; /* Eliminar espacio extra debajo de la imagen */
+    margin-bottom: 10px; /* Espacio entre imagen y texto */
+    border-radius: 4px;
+}
+
+.carrusel-item p {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+
+
+/* ====================================================================== */
+/*PÁGINA SERVICIOS*/
+/* ====================================================================== */
+
+/* Hero Section de Servicios */
+.hero-seccion-servicios {
+    position: relative;
+    min-height: 400px; /* Altura mínima de sección hero */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    color: var(--light-text); 
+    background-image: url('../images/fondo-servicios.jpg'); /* Imagen de fondo */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 0;
+}
+
+.hero-seccion-servicios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* opacidad */
+    z-index: 1;
+}
+
+.hero-servicios-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-servicios-contenido h1 {
+    font-size: 3.5em;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+/* Sección de Cards de Servicios */
+.servicios-grid-container {
+    background-color: var(--form-background); 
+    padding: 60px 20px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-servicios {
+    background-color: var(--bg-gray); /* Fondo para cards */
+    padding: 30px; /* Padding interno */
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: left; /* Alineación de texto dentro de la card */
+    box-sizing: border-box;
+}
+
+.card-servicios h3 {
+    font-size: 1.5em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.card-servicios p {
+    font-size: 1em;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+
+
+/* ====================================================================== */
+/*PÁGINA CONTACTO*/
+/* ====================================================================== */
+
+/* Contacto Section */
+.contact-seccion {
+    display: flex; 
+    gap: 60px; /* Espacio entre contacto y el formulario */
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contacto-info {
+    flex: 1; 
+    max-width: 45%; /* Limita ancho en desktop */
+}
+
+.contacto-info h1 {
+    font-size: 3em; 
+    margin-bottom: 20px;
+}
+
+.contacto-descripcion {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 40px; /* Espacio antes de sección "Sígueme" */
+}
+
+.seguir-redes h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.iconos-redes {
+    display: flex; 
+    gap: 20px; /* Espacio entre iconos */
+}
+
+.iconos-redes a {
+    color: var(--btn-blue); /* Color de los enlaces de redes */
+    text-decoration: none;
+    font-size: 1.2em; 
+    transition: color 0.3s ease;
+}
+
+.iconos-redes a:hover {
+    color: var(--text-dark);
+}
+
+
+/* Contenedor Formulario */
+.contenedor-formulario-contacto {
+    flex: 1.5; 
+    background-color: var(--form-background); 
+    padding: 40px; /* interno */
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    max-width: 55%; /* Limita ancho en desktop */
+}
+
+.formulario-contcto {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 25px; /* Espacio entre elementos del grid */
+}
+
+.formulario-grupo {
+    display: flex; 
+    flex-direction: column;
+}
+
+.formulario-grupo label {
+    font-weight: bold;
+    margin-bottom: 8px; /* Espacio entre label e input */
+    color: var(--text-dark);
+}
+
+.formulario-grupo input[type="text"],
+.formulario-grupo input[type="email"],
+.formulario-grupo input[type="tel"],
+.formulario-grupo textarea {
+    width: 100%; 
+    padding: 12px; /* interno */
+    border: 1px solid var(--input-border); 
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--text-dark);
+    background-color: var(--bg-gray); 
+    box-sizing: border-box; /
+}
+
+.formulario-grupo textarea {
+    resize: vertical; 
+    min-height: 120px; 
+}
+
+
+.formulario-grupo.full-width {
+    grid-column: 1 / -1; 
+}

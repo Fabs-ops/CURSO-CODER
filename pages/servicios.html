@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Servicios</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Portafolio</a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero-servicios" class="hero-seccion-servicios"> <div class="hero-servicios-contenido">
+                <h1>Servicios</h1>
+                <a href="contacto.html" class="btn primario-btn">Contactarme</a> </div>
+            </section>
+
+        <section id="servicios-ofrecidos" class="servicios-grid-container"> <div class="card-servicios">
+                <h3>Branding</h3>
+                <p>Creo identidades de marca únicas y memorables que conectan con tu audiencia. Desde logotipos hasta manuales de marca, tu esencia visual, estratégica y comunicacional es nuestra prioridad..</p>
+            </div>
+
+            <div class="card-servicios">
+                <h3>Diseño gráfico</h3>
+                <p>Transformo ideas en imágenes impactantes. Desde ilustraciones hasta material publicitario, creo diseños visuales que comunican tu mensaje de forma efectiva y atractiva.</p>
+            </div>
+
+            <div class="card-servicios">
+                <h3>Diseño UX/UI</h3>
+                <p>Diseño experiencias digitales intuitivas y atractivas. Me enfoco en la usabilidad y la interfaz para crear productos que tus usuarios amarán, garantizando una interacción fluida y satisfactoria.</p>
+            </div>
+
+            <div class="card-servicios"> <h3>Front End</h3>
+                <p>Doy vida a tus diseños con código impecable y responsivo. Desarrollo interfaces de usuario interactivas y eficientes, garantizando una experiencia web fluida y atractiva en cualquier dispositivo.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer"> <div class="footer-contacto">
+            <h3>Contacto</h3>
+            <p>Email: axelesparz@gmail.com</p>
+            <p>Teléfono: 55 4858 0584</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.behance.net/axelesparza1" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://www.instagram.com/fabian.esparz?igsh=MXdiaGQ0aHBiNjZtZw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/in/fabian-esparza-92983120b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+
+        <div class="footer-derechos">
+            <p>&copy; 2024 Fabian Esparza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

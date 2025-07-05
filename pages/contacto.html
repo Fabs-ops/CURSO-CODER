@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contacto</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Portafolio</a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacto" class="contact-seccion">
+            <div class="contacto-info">
+                <h1>Contacto</h1>
+                <p class="contacto-descripcion">Lorem ipsum dolor sit amet consectetur. Dolor bibendum quam enim massa in vitae. Ut id nunc morbi vitae tristique. Tempor iaculis sed lectus ut. Ante id nunc morbi vitae tristique quia magna. Ut id nunc morbi in risus massa fermentum accumsan lectus molestie.</p>
+
+                <div class="seguir-redes">
+                    <h2>Sígueme</h2>
+                    <div class="iconos-redes">
+                        <a href="https://www.instagram.com/fabian.esparz?igsh=MXdiaGQ0aHBiNjZtZw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.behance.net/axelesparza1" target="_blank" rel="noopener noreferrer">Behance</a>
+                        <a href="https://www.linkedin.com/in/fabian-esparza-92983120b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="contenedor-formulario-contacto">
+                <form class="formulario-contcto" action="#" method="POST">
+                    <div class="formulario-grupo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Ruiz" required>
+                    </div>
+                    <div class="formulario-grupo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
+                    </div>
+                    <div class="formulario-grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 55 567902345">
+                    </div>
+                    <div class="formulario-grupo">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto">
+                    </div>
+                    <div class="formulario-grupo full-width">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="7"></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer"> <div class="footer-contacto">
+            <h3>Contacto</h3>
+            <p>Email: axelesparz@gmail.com</p>
+            <p>Teléfono: 55 4858 0584</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.behance.net/axelesparza1" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://www.instagram.com/fabian.esparz?igsh=MXdiaGQ0aHBiNjZtZw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/in/fabian-esparza-92983120b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        <div class="footer-derechos">
+            <p>&copy; 2024 Fabian Esparza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
