@@ -519,7 +519,7 @@ p {
     align-items: center;
     text-align: center; 
     color: var(--light-text); /* Color de texto blanco para contrastar con la imagen */
-    background-image: url('../images/fondo-proyectos.jpg'); /* Imagen de fondo */
+    background-image: url('../images/fondo-proyectos.webp'); /* Imagen de fondo */
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
@@ -815,7 +815,7 @@ p {
     align-items: center; 
     text-align: center; 
     color: var(--light-text); 
-    background-image: url('../images/fondo-servicios.jpg'); /* Imagen de fondo */
+    background-image: url('../images/fondo-servicios.webp'); /* Imagen de fondo */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
