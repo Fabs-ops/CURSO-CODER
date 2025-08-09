@@ -1,0 +1,19 @@
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.primario-btn {
+    background-color: $color-primario;
+    color: $color-texto-claro;
+    border: 1px solid $color-primario;
+
+    &:hover {
+        background-color: darken($color-primario, 10%); // Función de SASS para oscurecer
+    }
+}

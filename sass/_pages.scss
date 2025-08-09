@@ -1,0 +1,15 @@
+.hero-seccion-servicios {
+    background-image: url('../imagenes/servicios-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-seccion {
+    max-width: $max-ancho-pagina;
+    margin: $espaciado-seccion auto;
+    
+    @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+  color: #21284F;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  color: #21284F;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header .navbar .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.header .navbar .nav-links li {
+  margin-left: 30px;
+}
+.header .navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.header .navbar .nav-links li a:hover {
+  color: #4554a5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.primario-btn {
+  background-color: #4554a5;
+  color: #fff;
+  border: 1px solid #4554a5;
+}
+.primario-btn:hover {
+  background-color: rgb(53.9615384615, 65.6923076923, 129.0384615385);
+}
+
+.hero-seccion-servicios {
+  background-image: url("../imagenes/servicios-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-seccion {
+  max-width: 1200px;
+  margin: 60px auto;
+}
+@media (max-width: 768px) {
+  .contact-seccion {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
